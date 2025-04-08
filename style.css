@@ -1,4 +1,4 @@
-/* Reset and Base Styling */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   color: #003366;
 }
 
-/* Header Section */
+
 header {
   background-color: #0077cc;
   color: white;
@@ -36,7 +36,7 @@ header p {
   margin-top: 10px;
 }
 
-/* Section Styling */
+
 section {
   padding: 40px 20px;
   max-width: 900px;
@@ -59,7 +59,7 @@ section ul li {
   font-size: 1rem;
 }
 
-/* Registration Button */
+
 #registerBtn {
   background-color: #0077cc;
   color: white;
@@ -75,7 +75,7 @@ section ul li {
   background-color: #005fa3;
 }
 
-/* Contact Links */
+
 #contact ul {
   list-style: none;
   padding-left: 0;
@@ -85,7 +85,7 @@ section ul li {
   margin-bottom: 10px;
 }
 
-/* Form Container */
+
 .form-container {
   max-width: 500px;
   margin: 30px auto;
@@ -127,7 +127,7 @@ form button:hover {
   background-color: #005fa3;
 }
 
-/* Participants Table */
+
 .participants {
   max-width: 800px;
   margin: 40px auto;
@@ -160,7 +160,7 @@ th {
 }
 
 
-/* Footer Styling */
+
 footer {
   background-color: #003366;
   color: white;
