@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Register for Human Ludo</h1>
+  </header>
+<!-- Registration Form -->
+<div class="form-container">
+  <form  action="register.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+  
+    <label for="contact">Contact Number:</label>
+    <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+</div>
+
+<!-- Registered Participants -->
+<!-- <div class="participants">
+  <h2>Registered Participants</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody id="participantList">
+      <tr>
+        <td>Sanika Sabale</td>
+        <td>ssabale1009@gmail.com</td>
+        <td>9022346274</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+  <!-- <script>
+  //  const registerForm = document.getElementById('registerForm');
+    const participantsTable = document.getElementById('participantsTable').getElementsByTagName('tbody')[0];
+
+    let participantsXML = `<participants></participants>`;
+    const parser = new DOMParser();
+    const serializer = new XMLSerializer();
+
+    registerForm.addEventListener('submit', (event) => {
+      // event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const contact = document.getElementById('contact').value;
+
+      const xmlDoc = parser.parseFromString(participantsXML, 'text/xml');
+      const newParticipant = xmlDoc.createElement('participant');
+      
+      const nameElement = xmlDoc.createElement('name');
+      nameElement.textContent = name;
+      newParticipant.appendChild(nameElement);
+
+      const emailElement = xmlDoc.createElement('email');
+      emailElement.textContent = email;
+      newParticipant.appendChild(emailElement);
+
+      const contactElement = xmlDoc.createElement('contact');
+      contactElement.textContent = contact;
+      newParticipant.appendChild(contactElement);
+
+      xmlDoc.getElementsByTagName('participants')[0].appendChild(newParticipant);
+      participantsXML = serializer.serializeToString(xmlDoc);
+
+      const newRow = participantsTable.insertRow();
+      newRow.innerHTML = `<td>${name}</td><td>${email}</td><td>${contact}</td>`;
+
+      registerForm.reset();
+    });
+  </script> -->
+
+  <script>
+    // Check the URL to see if registration was successful
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === '1') {
+      alert('Registration successful!');
+    }
+  </script>
+  
+</body>
+</html> 
+
+
+
+
